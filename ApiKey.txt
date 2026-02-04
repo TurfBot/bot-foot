@@ -1,0 +1,21 @@
+API_KEY = "ee6bfc898ab1b8e6c0efb14ccc219814"
+
+headers = {
+    "x-apisports-key": API_KEY
+}
+
+
+$botToken = "8436143101:AAG9T9Z0AmFYs8js2jvWVG_3OSDBdvTjDto"
+curl.exe "https://api.telegram.org/bot$botToken/getUpdates"
+
+
+$BOT_TOKEN = "8436143101:AAG9T9Z0AmFYs8js2jvWVG_3OSDBdvTjDto"
+$CHAT_ID = "902332745"
+
+Invoke-RestMethod -Uri "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" -Method Post -Body @{
+  chat_id = $CHAT_ID
+  text = "✅ Test OK : je peux t’envoyer des alertes."
+}
+
+
+902332745
